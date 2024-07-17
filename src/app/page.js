@@ -46,7 +46,7 @@ export default function PostPage() {
             <Link href={`/posts/${post.id}`}>
               <h2>{post.title}</h2>
             </Link>
-            {/* <p>{post.content}</p> */}
+            <p>{new Date(post.created_at).toLocaleDateString()}</p>
           </div>
         ))}
       </div>
