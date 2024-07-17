@@ -1,0 +1,23 @@
+.header-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2em;
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 80px;
+    padding-left: 20px;
+    box-shadow: 0 5px 5px black;
+    
+}
+.header-links a {
+    cursor: pointer;
+    padding: 20px;
+    color: #fff;
+}
+
+.header-links a:hover {
+    color: rgb(67, 67, 255);
+    transition: .2s;
+}

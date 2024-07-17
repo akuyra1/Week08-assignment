@@ -1,0 +1,48 @@
+.post-page-h1 {
+     text-align: center;
+     font-size: 3em;
+     margin: 20px;  
+     color:#fff;
+}
+
+.each-post-container {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 25px;
+    gap: 25px;
+    font-size: 2em;
+    padding: 10px;
+}
+
+.each-post {
+    background-color: rgb(99, 73, 73);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 25px;
+    gap: 252px;
+    font-size: 1.2em;
+    width: 300px;
+    padding: 10px;
+    border-radius: 2em;
+    box-shadow: 2px 5px 5px rgb(4, 4, 4);
+
+}
+
+.each-post h2:hover {
+    color: #fff;
+    transition: .45s;
+}
+.each-post-container h1 {
+    color: rgb(255, 255, 255);
+}
+.each-post-container a {
+    /* text-decoration: none; */
+    color: #5C7EFEE3;
+}
+.each-post-container p {
+    color: rgb(255, 255, 255);
+}
