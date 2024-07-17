@@ -1,5 +1,5 @@
 "use client";
-import homeStyles from '@/app/ComponentStyles/Home.css';
+import '@/app/ComponentStyles/Home.css';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import supabase from '@/app/utils/supabase';
@@ -8,7 +8,7 @@ import '@/app/ComponentStyles/CommentsStyles.css'
 
 export default function Post() {
   const pathname = usePathname();
-  const postId = pathname.split('/').pop(); // Extract the ID from the URL
+  const postId = pathname.split('/').pop()
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -50,18 +50,18 @@ export default function Post() {
     const { data, error } = await supabase
       .from('comments')
       .insert([{ post_id: postId, comment: newComment, author: 'Anonymous' }])
-      .select(); // Fetch the newly inserted comment
+      .select();
 
     if (error) {
       setError(error.message);
     } else {
-      // Check if data is valid and not empty
+    
       if (data && data.length > 0) {
-        setComments([...comments, data[0]]); // Add the newly inserted comment
+        setComments([...comments, data[0]]); 
       } else {
         setError("Failed to add comment. Please try again.");
       }
-      setNewComment(''); // Clear the input field
+      setNewComment(''); 
     }
   };
 

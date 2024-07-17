@@ -11,8 +11,7 @@ export default function Header(props) {
         <div className='header-links'>
 
             <Link href="/">Home</Link>
-            <Link href="/posts/1">Post</Link>
-            <Link href="/posts/1/1">All Posts</Link>
+
         </div>
 
 

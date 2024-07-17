@@ -1,16 +1,12 @@
-"use client"; // Ensure this component runs on the client side
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import supabase from '@/app/utils/supabase';
 import Link from 'next/link';
-import homeStyles from '@/app/ComponentStyles/Home.css';
-import PostsModule from '@/app/ComponentStyles/Posts.css'
+import '@/app/ComponentStyles/Home.css';
+import '@/app/ComponentStyles/Posts.css'
 import '@/app/ComponentStyles/IndividualPostContainer.css';
-
-
-
-
-
+ 
 
 export default function PostPage() {
   const [data, setData] = useState(null);
@@ -34,11 +30,11 @@ export default function PostPage() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className='loading'>Loading...</div>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className='error'>Error: {error}</div>;
   }
 
   return (
