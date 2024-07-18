@@ -41,3 +41,8 @@ body {
   text-align: center;
   margin: 2em;
 }
+
+body {
+  background-color: rgb(232, 84, 84);
+  height: 100vh;
+}

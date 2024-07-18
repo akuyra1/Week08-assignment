@@ -1,48 +1,94 @@
 .post-page-h1 {
      text-align: center;
-     font-size: 3em;
-     margin: 20px;  
-     color:#fff;
+     font-size: 4em;   
+     font-weight: bold;
+     margin: 100px 50px;  
+     color:#ffffff;
 }
 
 .each-post-container {
-    /* background-color: red; / */
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 25px;
-    gap: 25px;
+    flex-direction: column;
+    align-items: flex-start;
     font-size: 2em;
-    padding: 10px;
 }
 
 .each-post {
-    background-color: rgb(99, 73, 73);
+    background-color: rgb(255, 255, 255);
+    min-width: 1300px !important;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    margin: 25px;
-    gap: 252px;
-    font-size: 1.2em;
-    width: 300px;
-    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: .1rem 13rem;
+    font-size: 1em;
+    padding: 10px 100px;
     border-radius: 2em;
     box-shadow: 2px 5px 5px rgb(4, 4, 4);
 
 }
 
 .each-post h2:hover {
-    color: #fff;
+    color: #ff8484;
     transition: .45s;
 }
-.each-post-container h1 {
-    color: rgb(255, 255, 255);
-}
+
 .each-post-container a {
-    /* text-decoration: none; */
-    color: #5C7EFEE3;
+    color: #380f4ae3;
+    font-size: larger;
 }
+
 .each-post-container p {
-    color: rgb(255, 255, 255);
+    color: rgba(33, 33, 33, 0.292);
 }
+
+.title-span,
+.post-date {
+    font-size: 1.3rem;
+}
+
+.post-title-date-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-date {
+    color: #ff9d9d !important;
+}
+
+
+/* --------------------------  Media queries  -------------------------------------- */
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    body {
+        height: 100%;
+    }
+
+    .each-post {
+        margin: .5rem 1rem;
+        padding: 3rem;
+        min-width: 90% !important;
+        width: 90%;
+    }
+
+    .each-post-container {
+        padding-bottom: 5rem;
+  
+    }
+
+    .post-page-container {
+        width: 100vw;
+    }
+
+  }
+
+
+  @media screen and (min-width: 769px) and (max-width: 1500px) {
+    .each-post {
+        margin: 1rem;
+        padding: 3rem;
+        min-width: 90% !important;
+        width: 90%;
+
+    }
+  }

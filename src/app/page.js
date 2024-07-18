@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import supabase from '@/app/utils/supabase';
 import Link from 'next/link';
-import '@/app/ComponentStyles/Home.css';
-import '@/app/ComponentStyles/Posts.css'
 import '@/app/ComponentStyles/IndividualPostContainer.css';
  
 
@@ -38,19 +36,20 @@ export default function PostPage() {
   }
 
   return (
-    <div>
-        <h1 className='post-page-h1'>Posts</h1>
-      <div className='each-post-container'>
-        {data.map((post) => (
-          <div className='each-post' key={post.id}>
-            <Link href={`/posts/${post.id}`}>
-              <h2>{post.title}</h2>
-            </Link>
-            <p>{new Date(post.created_at).toLocaleDateString()}</p>
-          </div>
-        ))}
-      </div>
+    <div className='post-page-container'>
+        <h1 className='post-page-h1'>List Of Posts</h1>
+        <div className='each-post-container'>
+          {data.map((post) => (
+            <div className='each-post' key={post.id}>
+              <ul className='list-container'>
+                <li className='post-title-date-container'><span className='title-span'>Post title</span><p className='post-date'>{new Date(post.created_at).toLocaleDateString()}</p></li>
+                <li><Link href={`/posts/${post.id}`}><h2>{post.title}</h2></Link></li>
+              </ul>
+            </div>
+          ))}
+        </div>
     </div>
   );
 }
+
 
