@@ -99,7 +99,7 @@ textarea[placeholder] {
 
 /* Media queries */
 
-@media screen and (min-width: 440px) and (max-width: 768px) {
+@media screen and (min-width: 350px) and (max-width: 768px) {
 
     .comment-section-container {
         background-color: rgb(232, 84, 84);
